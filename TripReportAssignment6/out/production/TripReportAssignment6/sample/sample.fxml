@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1247.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label layoutX="56.0" layoutY="58.0" text="Truck No." />
+      <Label layoutX="54.0" layoutY="102.0" text="Driver No." />
+      <Label layoutX="56.0" layoutY="155.0" text="Co-Driver No." />
+      <Label layoutX="54.0" layoutY="194.0" text="Trip No." />
+      <Label layoutX="674.0" layoutY="58.0" text="Date Departed" />
+      <Label layoutX="675.0" layoutY="102.0" text="Date Returned" />
+      <Label layoutX="371.0" layoutY="58.0" text="Type of Merchandise" />
+      <Label layoutX="371.0" layoutY="102.0" text="State Code" />
+      <Label layoutX="371.0" layoutY="155.0" text="Mileage Before Trip" />
+      <Label layoutX="371.0" layoutY="194.0" text="Mileage After Trip" />
+      <Label layoutX="371.0" layoutY="233.0" text="Gallons Purchased" />
+
+      <TextField fx:id="truckNo" layoutX="149.0" layoutY="54.0" />
+      <TextField fx:id="driverNo" layoutX="149.0" layoutY="98.0" />
+      <TextField fx:id="coDriverNo" layoutX="149.0" layoutY="151.0" />
+      <TextField fx:id="tripNo" layoutX="149.0" layoutY="190.0" />
+      <TextField fx:id="typeMerchandise" layoutX="497.0" layoutY="54.0" />
+      <TextField fx:id="stateCode" layoutX="497.0" layoutY="98.0" />
+      <TextField fx:id="mileageBefore" layoutX="497.0" layoutY="151.0" />
+      <TextField fx:id="mileageAfter" layoutX="497.0" layoutY="190.0" />
+      <TextField fx:id="gallonsPurchased" layoutX="497.0" layoutY="229.0" />
+      <Label fx:id="label" layoutX="279.0" layoutY="14.0" text="TRIP REPORT" textOverrun="LEADING_ELLIPSIS">
+         <font>
+            <Font name="Droid Sans" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="submitReport" layoutX="24.0" layoutY="603.0" mnemonicParsing="false" onAction="#submitReport" text="Submit Report" />
+      <DatePicker fx:id="dateDep" layoutX="773.0" layoutY="54.0" prefHeight="25.0" prefWidth="149.0" />
+      <DatePicker fx:id="dateRet" layoutX="773.0" layoutY="98.0" prefHeight="25.0" prefWidth="149.0" />
+      <Button fx:id="detailReport" layoutX="149.0" layoutY="603.0" mnemonicParsing="false" onAction="#showDetailReports" text="View Detail Report" />
+      <Button fx:id="summaryReport" layoutX="293.0" layoutY="603.0" mnemonicParsing="false" onAction="#showSummaryReports" text="View Summary Report" />
+      <Button fx:id="exceptionReport" layoutX="467.0" layoutY="603.0" mnemonicParsing="false" onAction="#showExceptionReports" text="View Exception Report" />
+      <TableView fx:id="tableReport" layoutX="24.0" layoutY="277.0" prefHeight="316.0" prefWidth="1102.0">
+        <columns>
+            <TableColumn fx:id="tripNoCol" prefWidth="82.0" text="Trip No." />
+          <TableColumn fx:id="truckNoCol" prefWidth="114.0" text="Truck No." />
+          <TableColumn fx:id="driverNoCol" prefWidth="75.0" text="Driver No." />
+            <TableColumn fx:id="coDriverNoCol" prefWidth="99.0" text="Co Driver No." />
+            <TableColumn fx:id="dateDepartedCol" prefWidth="115.0" text="Date Departed" />
+            <TableColumn fx:id="dateReturnedCol" minWidth="4.0" prefWidth="113.0" text="Date Returned" />
+            <TableColumn fx:id="typeMerchCol" prefWidth="95.0" text="Type of Merch" />
+            <TableColumn fx:id="stateCodeCol" prefWidth="71.0" text="State Code" />
+            <TableColumn fx:id="mileageBeforeCol" minWidth="4.0" prefWidth="104.0" text="Mileage Before" />
+            <TableColumn fx:id="mileageAfterCol" minWidth="4.0" prefWidth="104.0" text="Mileage After" />
+            <TableColumn fx:id="gallonsCol" minWidth="4.0" prefWidth="128.0" text="Gallons Purchased" />
+        </columns>
+      </TableView>
+      <Label fx:id="result" layoutX="24.0" layoutY="676.0" />
+    </children>
+</AnchorPane>
